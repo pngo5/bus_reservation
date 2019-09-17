@@ -13,7 +13,8 @@ public static void main(String[] args) {
 			    secondLargest = array[a];
 			}
 		}
-	System.out.println(maxValue+ secondLargest);
+	System.out.println("maxValue: " + maxValue + " " 
+		+ "SecondLargest: "+ secondLargest);
 	}
 	
 }
