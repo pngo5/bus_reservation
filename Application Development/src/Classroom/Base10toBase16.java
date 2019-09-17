@@ -1,3 +1,4 @@
+package Classroom;
 import java.util.Scanner;
 public class Base10toBase16 {
 	public static void main(String[] args) {

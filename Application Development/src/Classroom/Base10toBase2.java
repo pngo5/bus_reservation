@@ -1,3 +1,4 @@
+package Classroom;
 import java.util.Scanner;
 // base10 to base2
 public class Base10toBase2 {
