@@ -15,10 +15,13 @@ public class Shift {
          
         for (int i = 1; i <= n; i++) {
         	//loop with nested for loop, each loop represents one shift
-        
+             /**
+              * This is the loops to loops the other loops.
+              *    
+              *  
+              *  **/
             temp = inputArray[inputArray.length-1]; 
-            //stores last number in temp variable
-             
+             /**  Stored the last array element into a temp **/
             for (int j = inputArray.length-1; j > 0; j--) {
             
                 inputArray[j] = inputArray[j-1];
