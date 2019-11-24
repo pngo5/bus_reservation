@@ -13,13 +13,13 @@ public abstract class User {
 	public User() {
 		
 	}
-	
+	// TODO Figure out how to create a new user to the database.
 	public User(String username, String password) {
 		this.username = username;
 		this.password = password;
 	}
 	
-	
+	//TODO Have an authentication proccess for the username and password.
 	public String getUsername() {
 		return username;
 	}
