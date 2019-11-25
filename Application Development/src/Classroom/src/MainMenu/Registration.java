@@ -1,4 +1,4 @@
-package MainMenu;
+package Classroom.src.MainMenu;
 /**
  * 
  * @author abdulhakimdarman

@@ -1,4 +1,4 @@
-package Users;
+package Classroom.src.Users;
 
 public class Test {
 
