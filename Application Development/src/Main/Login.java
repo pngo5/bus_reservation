@@ -3,7 +3,7 @@ package Main;
 import java.util.Scanner;
 /**
  * 
- * @author abdulhakimdarman
+ * @author abdulhakimdarman, phat, coleman 
  * 
  * login menu..
  *
