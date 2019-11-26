@@ -1,7 +1,6 @@
 package Classroom.src.MainMenu;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
 /**
  * 
  * @author abdulhakimdarman and phat
@@ -131,8 +130,7 @@ public class Registration {
 	 public static boolean hasUpperCase(String newPassword) {
 		 Pattern upperCase = Pattern.compile("[A-Z]");
 		 Matcher hasUpper = upperCase.matcher(newPassword);
-		 return hasUpper.find();
-		 
+		 return hasUpper.find();	 
 	 }
 	 
 	 /***
@@ -144,8 +142,7 @@ public class Registration {
 	 public static boolean hasDigit(String newPassword) {
 		 Pattern digit = Pattern.compile("[0-9]");
 		 Matcher hasDigit = digit.matcher(newPassword);
-		 return hasDigit.find();
-		 
+		 return hasDigit.find();		 
 	 }
 	 
 	 /**
