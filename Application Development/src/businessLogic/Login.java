@@ -1,4 +1,4 @@
-package Classroom.src.MainMenu;
+package businessLogic;
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
