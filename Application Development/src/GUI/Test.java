@@ -1,4 +1,4 @@
-package Classroom.src.Users;
+package GUI;
 
 public class Test {
 

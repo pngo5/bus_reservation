@@ -1,4 +1,4 @@
-package Main;
+package Database;
 
 import java.util.Scanner;
 
