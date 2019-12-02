@@ -1,4 +1,4 @@
-package BusinessLogic;
+package GUI;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
