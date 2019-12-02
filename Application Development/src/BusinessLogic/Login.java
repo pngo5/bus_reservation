@@ -12,7 +12,7 @@ import javafx.stage.Stage;
  * 
  * @author abdulhakimdarman
  * 
- * login menu..
+ * login menu....
  *
  */
 
