@@ -9,7 +9,14 @@ public abstract class User {
 	
 	private String username;
 	private String password;
-	
+	private String firstName;
+	private String lastName;
+	private String zip;
+	private String state;
+	private String secQ;
+	private String email;
+	private String ssn;
+	private boolean admin;
 	public User() {
 		
 	}

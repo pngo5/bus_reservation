@@ -26,6 +26,7 @@ public class Registration {
 	private String secQ;
 	private String email;
 	private String ssn;
+	private String secQuestions;
 
 	public String getNewUserName() {
 		return newUserName;
