@@ -1,4 +1,5 @@
-package GUI;
+package BusinessLogic;
+
 /**
  * 
  * @author abdulhakimdarman
