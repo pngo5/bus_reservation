@@ -1,10 +1,12 @@
-package GUI;
-package GUI;
+
+package projectTest1;
 import javafx.application.Application;
 import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
@@ -27,10 +29,7 @@ public class Login extends Application {
 	 */
 	
 	Stage window;
-	
-	Scene adminScene, userScene;
-	
-	Button adminLoginButton, userLoginButton , switchToUser, switchToAdmin;
+
 	
 	public static void main(String[] args) {
 		/**
@@ -49,7 +48,6 @@ public class Login extends Application {
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
-		
 		window = primaryStage;
 
 		GridPane userGrid = new GridPane();
@@ -57,79 +55,54 @@ public class Login extends Application {
 		userGrid.setVgap(8);
 		userGrid.setHgap(10);
 		
-		GridPane adminGrid = new GridPane();
-		adminGrid.setPadding(new Insets(10, 10, 10, 10));
-		adminGrid.setVgap(8);
-		adminGrid.setHgap(10);
-		
 		//Name label
 		Label nameLabel = new Label("Username: ");
 		GridPane.setConstraints(nameLabel, 0, 0);
 		
-		//Name label for admin
-		Label nameLabelAdmin = new Label("Username: ");
-		GridPane.setConstraints(nameLabelAdmin, 0, 0);
-		
-		
 		//Name input
 		TextField nameInput = new TextField("adarman1");
 		GridPane.setConstraints(nameInput, 1, 0);
-		
-		TextField nameInputAdmin = new TextField("adarman1");
-		GridPane.setConstraints(nameInputAdmin, 1, 0);
 	
 		//Pass Label for User
 		Label passLabel = new Label("Password: ");
 		GridPane.setConstraints(passLabel, 0, 1);
 		
-		//Pass Label for Admin
-		Label passLabelAdmin = new Label("Password: ");
-		GridPane.setConstraints(passLabelAdmin, 0, 1);
-				
 		//Password Input
-		TextField passInput = new TextField();
+		PasswordField passInput = new PasswordField();
 		passInput.setPromptText("password");
 		GridPane.setConstraints(passInput, 1, 1);
 		
-		//Password Input
-		TextField passInputAdmin = new TextField();
-		passInputAdmin.setPromptText("password");
-		GridPane.setConstraints(passInputAdmin, 1, 1);
-				
-		
+		//Login Button
 		Button loginButton = new Button("Log In");
 		GridPane.setConstraints(loginButton, 1, 2);
 		
-		Button loginButtonAdmin = new Button("Log In");
-		GridPane.setConstraints(loginButtonAdmin, 1, 2);
-		
-		//Button to log into admin
-		switchToAdmin = new Button("Admin Login");
-		GridPane.setConstraints(switchToAdmin, 2, 1);
-		switchToAdmin.setOnAction(e -> {
-			window.setScene(adminScene);
-			window.setTitle("Admin Login");
+		//Back button which takes the user back to the main menu
+		Button backButton = new Button("Go Back");
+		GridPane.setConstraints(backButton, 1, 3);
+		backButton.setOnAction(e -> {
+			MainMenu mm = new MainMenu();
+			try {
+				mm.start(primaryStage);
+			} catch (Exception e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
 		});
+	
+		
 		
 
-		//Button to switch to user
-		switchToUser = new Button("User Login");
-		GridPane.setConstraints(switchToUser, 2, 1);
-		switchToUser.setOnAction(e -> {
-			window.setScene(userScene);
-			window.setTitle("User Login");
-		});
+		userGrid.getChildren().addAll(nameLabel, nameInput, passLabel, passInput,
+				loginButton, backButton);
+		Scene userScene = new Scene(userGrid, 300, 300);
 		
-		userGrid.getChildren().addAll(nameLabel, nameInput, passLabel, passInput, loginButton, switchToAdmin);
-		userScene = new Scene(userGrid, 300, 300);
-		
-		
-		adminGrid.getChildren().addAll(nameLabelAdmin, nameInputAdmin, passLabelAdmin, passInputAdmin, loginButtonAdmin, switchToUser);
-		adminScene = new Scene(adminGrid, 300, 300);
-		
-		
+
+		userGrid.setAlignment(Pos.CENTER);
 		window.setScene(userScene);
 		window.setTitle("User Login");
 		window.show();
+	
 	}
+	
+
 }
