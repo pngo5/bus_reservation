@@ -42,31 +42,32 @@ public class RegistrationUI extends Application {
 	 */
 	@Override
 	public void start(Stage primaryStage) throws Exception {
-		window = primaryStage;
+		//window = primaryStage;
 		
-		window.setTitle("Bus Resvoir - Registration");
+		//window.setTitle("Bus Resvoir - Registration");
 		
 		GridPane gridPane = registrationGrid();
 		
         // Add UI controls to the registration form grid pane
-        addInputs(gridPane);
+        
         
         // Create a scene with registration form grid pane as the root node
-        Scene scene = new Scene(gridPane, 600, 350);
+        
         
         //Making the window fit the program
 
         
         // Set the scene in primary stage	
-        window.setScene(scene);
+        //window.setScene(scene);
         
-        window.show();
+       // window.show();
 		
 		
 		
 	}
 	
-	public GridPane registrationGrid() {
+	
+	public Scene registrationGrid() {
 		GridPane gridPane = new GridPane();
 		
 		gridPane.setAlignment(Pos.CENTER);
@@ -89,8 +90,12 @@ public class RegistrationUI extends Application {
         columnTwoConstrains.setHgrow(Priority.ALWAYS);
 
         gridPane.getColumnConstraints().addAll(columnOneConstraints, columnTwoConstrains);
+        
+        addInputs(gridPane);
 
-        return gridPane;
+        Scene scene = new Scene(gridPane, 600, 350);
+
+        return scene;
 	}
 	
 	public void addInputs(GridPane gridPane) {

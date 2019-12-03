@@ -1,6 +1,6 @@
 package GUI;
 
-public class Main {
+public class MainMenu {
 /***
  * hhiihi checking 
  */
