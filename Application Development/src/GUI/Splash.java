@@ -5,7 +5,10 @@ import javax.swing.JLabel;
 import javax.swing.JWindow;
 import javax.swing.SwingConstants;
 
-public class Splash {
+import javafx.application.Application;
+import javafx.stage.Stage;
+
+public class Splash extends Application {
  	
 	public  static void main(String[] args) {
 		
@@ -21,6 +24,12 @@ public class Splash {
 	
 	
 }
+
+	@Override
+	public void start(Stage primaryStage) throws Exception {
+		// TODO Auto-generated method stub
+		
+	}
 	
 
 	}
