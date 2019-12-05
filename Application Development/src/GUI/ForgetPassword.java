@@ -67,6 +67,7 @@ public void start(Stage primaryStage) throws Exception {
         securityQChoiceBox.getItems().addAll("What is the name of your first teacher",
         		"What is the name of your first pet",
         		"What is the name of your School"); 
+        securityQChoiceBox.setValue("What is the name of your first teacher");
         grid.add(securityQChoiceBox, 1, 3);
         
       
