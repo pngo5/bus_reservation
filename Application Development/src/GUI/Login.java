@@ -85,6 +85,15 @@ public class Login extends Application {
 		//Login Button
 		Button loginButton = new Button("Log In");
 		GridPane.setConstraints(loginButton, 1, 3);
+		loginButton.setOnAction(e -> {
+			MainApplication m1 = new MainApplication();
+			try {
+				m1.start(primaryStage);
+			} catch (Exception e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+		});
 		
 		Button forgotPasswordButton = new Button("Forgot Password");
 		GridPane.setConstraints(forgotPasswordButton, 1, 6);
