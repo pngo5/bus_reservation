@@ -87,6 +87,8 @@ public class RegistrationUI extends Application {
         // Add Name First Name Text Field
         TextField firstNameText = new TextField();
         firstNameText.setPrefHeight(20);
+        firstNameText.setPromptText("First Name");
+
         gridPane.add(firstNameText, 1,1);
         
         // Add Last Name Label
@@ -96,6 +98,8 @@ public class RegistrationUI extends Application {
         // Add Last Name Text Field
         TextField lastNameText = new TextField();
         lastNameText.setPrefHeight(20);
+        lastNameText.setPromptText("Last Name");
+
         gridPane.add(lastNameText, 1, 2);
         
         // Add Address Label
@@ -105,15 +109,17 @@ public class RegistrationUI extends Application {
         // Add Address Text Field
         TextField addressText = new TextField();
         addressText.setPrefHeight(20);
+        addressText.setPromptText("Address");
         gridPane.add(addressText, 1,3);
         
         // Add ZIP Label
-        Label zipLabel = new Label("ZIP : ");
+        Label zipLabel = new Label("Zip Code : ");
         gridPane.add(zipLabel, 0,4);
         
         // Add zip Text Field
         TextField zipText = new TextField();
         zipText.setPrefHeight(20);
+        zipText.setPromptText("Zip Code");
         gridPane.add(zipText, 1,4);
         
         // Add state Label
@@ -143,6 +149,7 @@ public class RegistrationUI extends Application {
         //Add email Text Field
         TextField emailText = new TextField();
         emailText.setPrefHeight(20);
+        emailText.setPromptText("Email");
         gridPane.add(emailText, 1,6); 
         
         //Add Username Label
@@ -152,6 +159,7 @@ public class RegistrationUI extends Application {
         //Add email Username text
         TextField usernameText = new TextField();
         usernameText.setPrefHeight(20);
+        usernameText.setPromptText("Username");
         gridPane.add(usernameText, 1,7); 
         
         
@@ -162,6 +170,7 @@ public class RegistrationUI extends Application {
         //Add password text
         PasswordField passwordText = new PasswordField();
         passwordText.setPrefHeight(20);
+        passwordText.setPromptText("Password");
         gridPane.add(passwordText, 1,8); 
         
         //Add SSN label
@@ -169,7 +178,8 @@ public class RegistrationUI extends Application {
         gridPane.add(ssnLabel, 0, 9);
         
         //Add SSN text field
-        TextField ssnTextField = new TextField();
+        PasswordField ssnTextField = new PasswordField();
+        ssnTextField.setPromptText("Social Security Number");
         gridPane.add(ssnTextField, 1, 9);
         
         //Add Security Question Label
@@ -189,7 +199,8 @@ public class RegistrationUI extends Application {
         gridPane.add(securityALabel, 0, 11);
         
         //Add Security Answer Field
-        TextField securityATextField = new TextField();
+        PasswordField securityATextField = new PasswordField();
+        securityATextField.setPromptText("Security Answer");
         gridPane.add(securityATextField, 1, 11);
         
         Button registerButton = new Button("Sign Up");
