@@ -117,6 +117,21 @@ public class Registration {
 			return false;
 		}
 	}
+	
+	/**
+	 * validating that the username is less than 15 characters . 
+	 * Must better 4 characters.
+	 * 
+	 * */
+	
+	
+	public static boolean lengthUsernameCheck(String newUsername) {
+		if (newUsername.length() < 15 && newUsername.length() >= 4) {
+			return true;
+		} else {
+			return false;
+		}
+	}
 
 	/*****
 	 * 
