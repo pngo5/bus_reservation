@@ -62,17 +62,21 @@ package GUI;
 	        Label securityALabel = new Label("Confirm Password: ");
 	        grid.add(securityALabel, 0, 2);
 	        
-	        PasswordField securityQuestion = new PasswordField();
-	        securityQuestion.setPrefHeight(20);
-	        securityQuestion.setPromptText("Confirm Password");
-	        grid.add( securityQuestion, 1,2); 
+	        PasswordField confirmPassword = new PasswordField();
+	        confirmPassword.setPrefHeight(20);
+	        confirmPassword.setPromptText("Confirm Password");
+	        grid.add( confirmPassword, 1,2); 
 	        
 	        
 	        Button changePassword= new Button("Change Password");
 	        changePassword.setAlignment(Pos.CENTER);
 	        grid.add(changePassword,1,3);
 	        changePassword.setOnAction(e -> {
-	        	AlertBox.display("Password Changed!", "Congratulations you change your password.");
+	        	if (changePassword.getText().isEmpty()|| confirmPassword.getText().isEmpty()) {
+	        		AlertBox.display("ERROR!", "You are missing some inputs!");
+	        	}
+	        	else {
+	        	AlertBox.display("Password Changed!", "Congratulations you change your password!");
 				Login m1 = new Login();
 				try {
 					m1.start(primaryStage);
@@ -80,7 +84,9 @@ package GUI;
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}
-			});
+			}
+	      }
+	        );
 	        
 	        
 	     
