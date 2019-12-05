@@ -2,7 +2,6 @@ package GUI;
 
 import java.sql.Date;
 
-import application.Product;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -36,7 +35,7 @@ public class MainApplication extends Application{
 	ChoiceBox<String> endCity;
 	Button backToMainMenu, logOut;
 	TableColumn<BusSystem, String> busNumber, startTime, endTime, startLocation, endLocation, ticketPrice; 
-	TableView<BusSystem> table;
+	TableView table;
 	
 	@SuppressWarnings("unchecked")
 	@Override
@@ -49,28 +48,28 @@ public class MainApplication extends Application{
 		GridPane userMainApplicationGrid = new GridPane();
 		 
 		busNumber = new TableColumn<>("Bus ID");
-		busNumber.setMinWidth(200);
-		busNumber.setCellValueFactory(new PropertyValueFactory<>("bus Number"));
+		busNumber.setMinWidth(100);
+		busNumber.setCellValueFactory(new PropertyValueFactory<>("busNumber"));
 		
 		startTime = new TableColumn<>("Start Time");
-		startTime.setMinWidth(200);
-		startTime.setCellValueFactory(new PropertyValueFactory<>("Start Time"));
+		startTime.setMinWidth(100);
+		startTime.setCellValueFactory(new PropertyValueFactory<>("startTime"));
 		 
 		endTime = new TableColumn<>("End Time");
-		endTime.setMinWidth(200);
-		endTime.setCellValueFactory(new PropertyValueFactory<>("End Time"));
+		endTime.setMinWidth(100);
+		endTime.setCellValueFactory(new PropertyValueFactory<>("endTime"));
 		
 		startLocation = new TableColumn<>("Start Location");
-		startLocation.setMinWidth(200);
-		startLocation.setCellValueFactory(new PropertyValueFactory<>("End Location"));
+		startLocation.setMinWidth(100);
+		startLocation.setCellValueFactory(new PropertyValueFactory<>("startLocation"));
 		
 		endLocation = new TableColumn<>("End Location");
-		endLocation.setMinWidth(200);
-		endLocation.setCellValueFactory(new PropertyValueFactory<>("End Location"));
+		endLocation.setMinWidth(100);
+		endLocation.setCellValueFactory(new PropertyValueFactory<>("endLocation"));
 		
 		ticketPrice = new TableColumn<>("Ticket Price");
-		ticketPrice.setMinWidth(200);
-		ticketPrice.setCellValueFactory(new PropertyValueFactory<>("Ticket Price"));
+		ticketPrice.setMinWidth(100);
+		ticketPrice.setCellValueFactory(new PropertyValueFactory<>("ticketPrice"));
 		
 		table = new TableView<>();
 		
@@ -78,14 +77,17 @@ public class MainApplication extends Application{
 		
 		table.getColumns().addAll(busNumber, startTime, endTime, startLocation, endLocation, ticketPrice);
 		
-		
+	  
 		VBox vBox = new VBox();
 		vBox.getChildren().addAll(table);
 		
-		GridPane.setHgrow(vBox, Priority.ALWAYS);
-		GridPane.setConstraints(vBox, 0, 0);
 		
-		Scene scene = new Scene(userMainApplicationGrid);
+		userMainApplicationGrid.setVgap(5); 
+		userMainApplicationGrid.setHgap(5); 
+		
+		userMainApplicationGrid.add(vBox, 0, 0);
+		
+		Scene scene = new Scene(userMainApplicationGrid, 1000 , 1000);
 		
 		window.setScene(scene);
 		
@@ -100,11 +102,11 @@ public class MainApplication extends Application{
 	
 	 public ObservableList<BusSystem> getBusSystem(){
 		 
-	    	ObservableList<BusSystem> BusSystem = FXCollections.observableArrayList();
-	    	BusSystem.add(new BusSystem(2314214L, "1 AM", "1 PM","Atl", 40.40));
-	    	BusSystem.add(new BusSystem(2314214L,"1 am","2 a6s", "Dallas", 40.40));
+	    	ObservableList<BusSystem> BusSystem1 = FXCollections.observableArrayList();
+	    	BusSystem1.add(new BusSystem(2314214, "1 AM", "1 PM","Atl", "Dallas", 40.40));
+	    	BusSystem1.add(new BusSystem(2314214,"1 Am","2 AM", "Dallas", "Atl",  40.40));
 	    	
-	    	return BusSystem;
+	    	return BusSystem1;
 	    	
 	    }
 	 public static void main(String[] args) {
