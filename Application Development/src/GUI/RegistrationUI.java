@@ -206,7 +206,7 @@ public class RegistrationUI extends Application {
         gridPane.add(registerButton, 1, 12);
         
         // Create a scene with registration form 
- 		Scene scene = new Scene(gridPane);
+ 		Scene scene = new Scene(gridPane, 500, 500);
         
         // Set the scene in primary stage	
         window.setScene(scene);

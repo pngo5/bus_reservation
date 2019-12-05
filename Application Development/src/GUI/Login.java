@@ -1,5 +1,5 @@
 
-package projectTest1;
+package GUI;
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;

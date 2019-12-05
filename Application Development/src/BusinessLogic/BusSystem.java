@@ -12,7 +12,6 @@ public class BusSystem {
 	
 	private long BusNumber;
 	private Date startTime;
-	private Date endTime;
 	private String startLocation;
 	private String endLocation;
 	private double ticketPrice;
@@ -20,7 +19,6 @@ public class BusSystem {
 	public BusSystem() {
 		BusNumber = 0;
 		startTime = null;
-		endTime = null;
 		startLocation = "Atl";
 		endLocation = "Washington D.C";
 		ticketPrice = 0;
@@ -31,7 +29,6 @@ public class BusSystem {
 			String startLocation, String endLocation, double ticketPrice) {
 		BusNumber = this.BusNumber;
 		startTime = this.startTime;
-		endTime = this.endTime;
 		startLocation = this.startLocation;
 		endLocation = this.endLocation;
 		ticketPrice = this.ticketPrice;
@@ -48,12 +45,6 @@ public class BusSystem {
 	}
 	public void setStartTime(Date startTime) {
 		this.startTime = startTime;
-	}
-	public Date getEndTime() {
-		return endTime;
-	}
-	public void setEndTime(Date endTime) {
-		this.endTime = endTime;
 	}
 	public String getStartLocation() {
 		return startLocation;

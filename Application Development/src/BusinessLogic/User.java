@@ -7,6 +7,7 @@ package BusinessLogic;
  */
 public abstract class User {
 	
+	
 	private String username;
 	private String password;
 	private String firstName;
@@ -17,6 +18,7 @@ public abstract class User {
 	private String email;
 	private String ssn;
 	private boolean admin;
+	
 	public User() {
 		
 	}
@@ -39,8 +41,5 @@ public abstract class User {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	
-	
-/**** Hello***/ 
 
 }
