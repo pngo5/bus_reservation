@@ -139,6 +139,8 @@ public class RegistrationUI extends Application {
         		"Puerto Rico", "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", 
         		"U.S. Virgin Islands", "Utah", "Vermont", "Virginia", "Washington", "West Virginia", 
         		"Wisconsin", "Wyoming");
+        stateBox.setValue("Georgia");
+        
         gridPane.add(stateBox, 1, 5);
         
         
@@ -191,6 +193,7 @@ public class RegistrationUI extends Application {
         securityQChoiceBox.getItems().addAll("What is the name of your first teacher",
         		"What is the name of your first pet",
         		"What is the name of your School"); 
+        securityQChoiceBox.setValue("What is the name of your first teacher");
         gridPane.add(securityQChoiceBox, 1, 10);
         
       
