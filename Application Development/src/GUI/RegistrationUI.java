@@ -93,7 +93,7 @@ public class RegistrationUI extends Application {
         Label lastNameLabel = new Label("Last Name : ");
         gridPane.add(lastNameLabel, 0,2);
         
-        // Add Name Last Name Text Field
+        // Add Last Name Text Field
         TextField lastNameText = new TextField();
         lastNameText.setPrefHeight(20);
         gridPane.add(lastNameText, 1, 2);
@@ -154,6 +154,7 @@ public class RegistrationUI extends Application {
         usernameText.setPrefHeight(20);
         gridPane.add(usernameText, 1,7); 
         
+        
         //Add Password Label
         Label passwordLabel = new Label("Password : ");
         gridPane.add(passwordLabel, 0,8);
@@ -191,22 +192,31 @@ public class RegistrationUI extends Application {
         TextField securityATextField = new TextField();
         gridPane.add(securityATextField, 1, 11);
         
-        Button registerButton = new Button("Register !");
+        Button registerButton = new Button("Sign Up");
         
         registerButton.setOnAction(e -> {
-        	Login lgn = new Login();
-        	try {
-				lgn.start(primaryStage);
-			} catch (Exception e1) {
-				// TODO Auto-generated catch block
-				e1.printStackTrace();
-			}
+
+        	if(firstNameText.getText().isEmpty() || lastNameText.getText().isEmpty() ||
+        			addressText.getText().isEmpty() ||  zipText.getText().isEmpty() ||
+        			emailText.getText().isEmpty() ||  usernameText.getText().isEmpty() ||
+        			passwordText.getText().isEmpty() ||  ssnTextField.getText().isEmpty() ||
+        			securityATextField.getText().isEmpty()) {
+        		AlertBox.display("Finish the registration", "You are missing some inputs.");
+        	}else {
+        		Login lgn = new Login();
+        		try {
+        			lgn.start(primaryStage);
+        		} catch (Exception e1) {
+        			// TODO Auto-generated catch block
+        			e1.printStackTrace();
+        		}
+        	}
         });
         
         gridPane.add(registerButton, 1, 12);
         
         // Create a scene with registration form 
- 		Scene scene = new Scene(gridPane, 500, 500);
+ 		Scene scene = new Scene(gridPane, 700, 600);
         
         // Set the scene in primary stage	
         window.setScene(scene);
