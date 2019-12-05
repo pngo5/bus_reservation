@@ -60,7 +60,8 @@ public class Login extends Application {
 		GridPane.setConstraints(nameLabel, 0, 0);
 		
 		//Name input
-		TextField nameInput = new TextField("adarman1");
+		TextField nameInput = new TextField();
+		nameInput.setPromptText("Username");	
 		GridPane.setConstraints(nameInput, 1, 0);
 	
 		//Pass Label for User
@@ -94,7 +95,7 @@ public class Login extends Application {
 
 		userGrid.getChildren().addAll(nameLabel, nameInput, passLabel, passInput,
 				loginButton, backButton);
-		Scene userScene = new Scene(userGrid, 300, 300);
+		Scene userScene = new Scene(userGrid, 500, 500);
 		
 
 		userGrid.setAlignment(Pos.CENTER);

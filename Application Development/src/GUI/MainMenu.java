@@ -70,7 +70,7 @@ public class MainMenu extends Application {
         layout.setAlignment(Pos.CENTER);
         
         
-        Scene scene = new Scene(layout, 400, 400);
+        Scene scene = new Scene(layout, 500, 500);
         
         
         window.setScene(scene);
