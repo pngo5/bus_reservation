@@ -26,9 +26,17 @@ import javafx.stage.Stage;
 
 public class MainMenu extends Application {
 
-     Stage window;
+     private Stage window;
 
-    public static void main(String[] args) {
+    public Stage getWindow() {
+		return window;
+	}
+
+	public void setWindow(Stage window) {
+		this.window = window;
+	}
+
+	public static void main(String[] args) {
         launch(args);
     }
 
