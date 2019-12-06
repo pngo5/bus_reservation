@@ -1,4 +1,4 @@
-package BusinessLogic;
+package Objects;
 /**
  * 
  * @author abdulhakimdarman
