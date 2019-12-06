@@ -80,7 +80,7 @@ public class MainMenu extends Application {
         
         Scene scene = new Scene(layout, 500, 500);
         
-        
+        scene.getStylesheets().add("Layout.css");
         window.setScene(scene);
         window.show();
     }
