@@ -12,7 +12,6 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
-import javafx.scene.transform.Scale;
 import javafx.stage.Stage;
 
 /**
@@ -20,8 +19,6 @@ import javafx.stage.Stage;
  * @author abdulhakimdarman
  * 
  * login menu....
- * 
- * ......
  *
  */
 
@@ -36,9 +33,7 @@ public class Login extends Application {
 	
 	Stage window;
 
-	public int sds() {
-		return 1;
-	}
+	
 	public static void main(String[] args) {
 		/**
 		 * Launching into Javafx
@@ -90,30 +85,6 @@ public class Login extends Application {
 		//Login Button
 		Button loginButton = new Button("Log In");
 		GridPane.setConstraints(loginButton, 1, 3);
-		loginButton.setOnAction(e -> {
-<<<<<<< HEAD
-			MainApplication mm = new MainApplication();
-			try {
-				mm.start(primaryStage);
-			} catch (Exception e1) {
-				// TODO Auto-generated catch block
-				e1.printStackTrace();
-			}
-		});
-	
-		
-		
-		
-=======
-			MainApplication m1 = new MainApplication();
-			try {
-				m1.start(primaryStage);
-			} catch (Exception e1) {
-				// TODO Auto-generated catch block
-				e1.printStackTrace();
-			}
-		});
->>>>>>> branch 'Beta' of https://github.com/pngo5/DataLegend.git
 		
 		Button forgotPasswordButton = new Button("Forgot Password");
 		GridPane.setConstraints(forgotPasswordButton, 1, 6);
@@ -150,7 +121,6 @@ public class Login extends Application {
 		
 
 		userGrid.setAlignment(Pos.CENTER);
-		userScene.getStylesheets().add("Layout.css");
 		window.setScene(userScene);
 		window.setTitle("User Login");
 		window.show();
