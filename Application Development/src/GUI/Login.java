@@ -19,6 +19,8 @@ import javafx.stage.Stage;
  * @author abdulhakimdarman
  * 
  * login menu....
+ * 
+ * ......
  *
  */
 
@@ -33,7 +35,9 @@ public class Login extends Application {
 	
 	Stage window;
 
-	
+	public int sds() {
+		return 1;
+	}
 	public static void main(String[] args) {
 		/**
 		 * Launching into Javafx
