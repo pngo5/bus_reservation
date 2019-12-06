@@ -12,6 +12,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
+import javafx.scene.transform.Scale;
 import javafx.stage.Stage;
 
 /**
@@ -85,6 +86,19 @@ public class Login extends Application {
 		//Login Button
 		Button loginButton = new Button("Log In");
 		GridPane.setConstraints(loginButton, 1, 3);
+		loginButton.setOnAction(e -> {
+			MainApplication mm = new MainApplication();
+			try {
+				mm.start(primaryStage);
+			} catch (Exception e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+		});
+	
+		
+		
+		
 		
 		Button forgotPasswordButton = new Button("Forgot Password");
 		GridPane.setConstraints(forgotPasswordButton, 1, 6);
@@ -121,6 +135,7 @@ public class Login extends Application {
 		
 
 		userGrid.setAlignment(Pos.CENTER);
+		userScene.getStylesheets().add("Layout.css");
 		window.setScene(userScene);
 		window.setTitle("User Login");
 		window.show();
