@@ -29,7 +29,7 @@ import javafx.stage.Stage;
  * It will include the ability for the user to book reservations, delete their reservations,
  * and view reservations.
  * 
- *  
+ *  ..
  * 	private Date startTime;
 	private String startLocation;
 	private String endLocation;
