@@ -49,7 +49,8 @@ public class MainApplication extends Application {
 //Create GridPane
 		GridPane grid = createGrid();
 
-		Scene scene = new Scene(grid, 1100, 900);
+		Scene scene = new Scene(grid, 1000, 650);
+		scene.getStylesheets().add("Layout.css");
 
 		window.setScene(scene);
 

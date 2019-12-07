@@ -27,6 +27,7 @@ public class AlertBox {
 		layout.setAlignment(Pos.CENTER);
 		
 		Scene scene = new Scene(layout);
+		scene.getStylesheets().add("Layout.css");
 		window.setScene(scene);
 		window.showAndWait();
 	}

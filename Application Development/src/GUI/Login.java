@@ -128,8 +128,7 @@ public class Login extends Application {
 		userGrid.getChildren().addAll(nameLabel, nameInput, passLabel, passInput,forgotPasswordButton,
 				loginButton, backButton);
 		Scene userScene = new Scene(userGrid, 500, 500);
-		
-
+		userScene.getStylesheets().add("Layout.css");
 		userGrid.setAlignment(Pos.CENTER);
 		window.setScene(userScene);
 		window.setTitle("User Login");

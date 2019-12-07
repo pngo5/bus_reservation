@@ -93,8 +93,8 @@ package GUI;
 	        
 	  
 	        Scene scene = new Scene(grid, 500,500);
-	        window.setScene(scene);
-		    
+	    	scene.getStylesheets().add("Layout.css");
+	        window.setScene(scene);	    
 		    window.show();
 		
 	}
