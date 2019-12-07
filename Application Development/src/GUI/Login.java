@@ -11,6 +11,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
@@ -61,37 +62,59 @@ public class Login extends Application {
 		userGrid.setVgap(8);
 		userGrid.setHgap(10);
 		
-		 Label headerLabel = new Label("Login");
-	      headerLabel.setFont(Font.font("Arial", FontWeight.BOLD, 24));
-	      userGrid.add(headerLabel, 0,0,2,1);
-	      GridPane.setHalignment(headerLabel, HPos.CENTER);
-	      GridPane.setMargin(headerLabel, new Insets(9, 1,9,1));
 		
-		//Name label
-		Label nameLabel = new Label("Username: ");
-		GridPane.setConstraints(nameLabel, 0, 1);
 		
+	      VBox inputGrid = inputs();
+		
+
+		userGrid.getChildren().addAll(inputGrid);
+		Scene userScene = new Scene(userGrid, 500, 500);
+		userScene.getStylesheets().add("Layout.css");
+		userGrid.setAlignment(Pos.CENTER);
+		window.setScene(userScene);
+		window.setTitle("User Login");
+		window.show();
+	
+	}
+	
+	
+	public VBox inputs() {
+		
+		VBox input = new VBox();
+		input.setAlignment(Pos.CENTER);
+
+		  Label headerLabel = new Label("Login");
+	      headerLabel.setFont(Font.font("Arial", FontWeight.BOLD, 40));
+	      //headerLabel.setMinSize(300, 300);
+	      input.setAlignment(Pos.TOP_CENTER);
+	      input.setMargin(headerLabel, new Insets(20, 0,20,0));
+	      
 		//Name input
 		TextField nameInput = new TextField();
-		nameInput.setPromptText("Username");	
-		GridPane.setConstraints(nameInput, 1, 1);
+		nameInput.setPromptText("Username");
+		nameInput.setMinSize(100, 20);
+		nameInput.setAlignment(Pos.CENTER);
+		input.setMargin(nameInput, new Insets(5, 5, 5, 5) );
+		
 	
-		//Pass Label for User
-		Label passLabel = new Label("Password: ");
-		GridPane.setConstraints(passLabel, 0, 2);
 		
 		//Password Input
 		PasswordField passInput = new PasswordField();
+		passInput.setMinSize(100, 20);
 		passInput.setPromptText("password");
-		GridPane.setConstraints(passInput, 1, 2);
+		passInput.setAlignment(Pos.CENTER);
+		input.setMargin(passInput, new Insets(5, 5, 5, 5) );
+
 		
 		//Login Button
 		Button loginButton = new Button("Log In");
-		GridPane.setConstraints(loginButton, 0, 3);
+		loginButton.setMinSize(200, 20);
+		loginButton.setAlignment(Pos.CENTER);
+		input.setMargin(loginButton, new Insets(5, 5, 5, 5) );
 		loginButton .setOnAction(e -> {
 			MainApplication ma = new MainApplication();
 			try {
-				ma.start(primaryStage);
+				ma.start(window);
 			} catch (Exception e1) {
 				// TODO Auto-generated catch block
 				e1.printStackTrace();
@@ -99,11 +122,13 @@ public class Login extends Application {
 		});
 	
 		Button forgotPasswordButton = new Button("Forgot Password");
-		GridPane.setConstraints(forgotPasswordButton, 1, 3);
+		forgotPasswordButton.setMinSize(200, 20);
+		forgotPasswordButton.setAlignment(Pos.CENTER);
+		input.setMargin(forgotPasswordButton, new Insets(5, 5, 5, 5) );
 		forgotPasswordButton.setOnAction(e -> {
 			ForgetPassword m1 = new ForgetPassword();
 			try {
-				m1.start(primaryStage);
+				m1.start(window);
 			} catch (Exception e1) {
 				// TODO Auto-generated catch block
 				e1.printStackTrace();
@@ -113,29 +138,23 @@ public class Login extends Application {
 		
 		//Back button which takes the user back to the main menu
 		Button backButton = new Button("Go Back");
-		GridPane.setConstraints(backButton, 1, 4);
+		backButton.setMinSize(200, 20);
+		backButton.setAlignment(Pos.CENTER);
+		input.setMargin(backButton, new Insets(5, 5, 5, 5) );
 		backButton.setOnAction(e -> {
 			MainMenu mm = new MainMenu();
 			try {
-				mm.start(primaryStage);
+				mm.start(window);
 			} catch (Exception e1) {
 				// TODO Auto-generated catch block
 				e1.printStackTrace();
 			}
 		});
-	
 		
+		input.getChildren().addAll(headerLabel,nameInput, passInput, loginButton, forgotPasswordButton, backButton);
 		
-
-		userGrid.getChildren().addAll(nameLabel, nameInput, passLabel, passInput,forgotPasswordButton,
-				loginButton, backButton);
-		Scene userScene = new Scene(userGrid, 500, 500);
-		userScene.getStylesheets().add("Layout.css");
-		userGrid.setAlignment(Pos.CENTER);
-		window.setScene(userScene);
-		window.setTitle("User Login");
-		window.show();
-	
+		return input;
+		
 	}
 	
 
