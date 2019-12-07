@@ -87,7 +87,7 @@ public class Login extends Application {
 		
 		//Login Button
 		Button loginButton = new Button("Log In");
-		GridPane.setConstraints(loginButton, 1, 3);
+		GridPane.setConstraints(loginButton, 0, 3);
 		loginButton .setOnAction(e -> {
 			MainApplication ma = new MainApplication();
 			try {
@@ -99,7 +99,7 @@ public class Login extends Application {
 		});
 	
 		Button forgotPasswordButton = new Button("Forgot Password");
-		GridPane.setConstraints(forgotPasswordButton, 1, 6);
+		GridPane.setConstraints(forgotPasswordButton, 1, 3);
 		forgotPasswordButton.setOnAction(e -> {
 			ForgetPassword m1 = new ForgetPassword();
 			try {

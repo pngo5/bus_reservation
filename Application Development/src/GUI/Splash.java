@@ -28,7 +28,7 @@ public class Splash extends Application {
 
 	      window.setVisible(true);
 	      try {
-	    	 Thread.sleep(4250);    	  
+	    	 Thread.sleep(4342);    	  
 	         }
 	   catch(InterruptedException e) {}	
 		window.dispose();
