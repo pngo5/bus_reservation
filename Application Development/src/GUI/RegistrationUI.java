@@ -24,6 +24,7 @@ public class RegistrationUI extends Application {
 	
 	Button registerButton;
 	Stage window;
+	TextField firstNameText, lastNameText, addressText, zipText, emailText;
 	
 	public static void main(String[] args) {
 		launch(args);
@@ -127,20 +128,8 @@ public class RegistrationUI extends Application {
         gridPane.add(stateLabel, 0,5);
         
         //Add state drop down menu
-        ChoiceBox<String> stateBox = new ChoiceBox();
-        stateBox.getItems().addAll("Alabama", "Alaska", "American Samoa", "Arizona", 
-        		"Arkansas", "California", "Colorado", "Connecticut", "Delaware", 
-        		"District of Columbia", "Florida", "Georgia", "Guam", "Hawaii", "Idaho", 
-        		"Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine", 
-        		"Maryland", "Massachusetts", "Michigan", "Minnesota", 
-        		"Minor Outlying Islands", "Mississippi", "Missouri", "Montana", "Nebraska", 
-        		"Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York", "North Carolina", 
-        		"North Dakota", "Northern Mariana Islands", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", 
-        		"Puerto Rico", "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", 
-        		"U.S. Virgin Islands", "Utah", "Vermont", "Virginia", "Washington", "West Virginia", 
-        		"Wisconsin", "Wyoming");
-        stateBox.setValue("Georgia");
-        
+        TextField stateBox = new TextField();
+        zipText.setPromptText("Select ");
         gridPane.add(stateBox, 1, 5);
         
         

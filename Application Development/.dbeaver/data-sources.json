@@ -1,7 +1,7 @@
 {
 	"folders": {},
 	"connections": {
-		"mysql5-16ed433db88-5165b4b0594c4649": {
+		"mysql5-16ede0cdc74-34249186ec1e4675": {
 			"provider": "mysql",
 			"driver": "mysql5",
 			"name": "MySQL - 34.74.172.98",
@@ -11,7 +11,8 @@
 				"host": "34.74.172.98",
 				"port": "3306",
 				"url": "jdbc:mysql://34.74.172.98:3306/",
-				"type": "dev"
+				"type": "dev",
+				"handlers": {}
 			}
 		}
 	},

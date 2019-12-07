@@ -182,8 +182,6 @@ public class MainApplication extends Application{
 		 	ObservableList<BusSystem> productSelected, allProducts;
 	    	allProducts = this.table.getItems();
 	    	productSelected = this.table.getSelectionModel().getSelectedItems();
-	    	
-	    	
 	    }
 	    
 	    public void deleteButtonClicked() {

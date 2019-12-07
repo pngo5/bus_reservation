@@ -1,29 +1,16 @@
 {
 	"folders": {},
 	"connections": {
-		"mysql5-16ed433db88-5165b4b0594c4649": {
+		"mysql5-16edda3d419-7ba3e4e8114cf985": {
 			"provider": "mysql",
 			"driver": "mysql5",
-			"name": "MySQL - 34.74.172.98",
+			"name": "MySQL - localhost",
 			"save-password": true,
 			"read-only": false,
 			"configuration": {
-				"host": "34.74.172.98",
+				"host": "localhost",
 				"port": "3306",
-				"url": "jdbc:mysql://34.74.172.98:3306/",
-				"type": "dev"
-			}
-		},
-		"mysql5-16ed84c6677-73cd07fd008948e3": {
-			"provider": "mysql",
-			"driver": "mysql5",
-			"name": "MySQL - 34.74.172.98 5",
-			"save-password": true,
-			"read-only": false,
-			"configuration": {
-				"host": "34.74.172.98",
-				"port": "3306",
-				"url": "jdbc:mysql://34.74.172.98:3306/",
+				"url": "jdbc:mysql://localhost:3306/",
 				"type": "dev",
 				"handlers": {}
 			}
