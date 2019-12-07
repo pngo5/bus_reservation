@@ -47,6 +47,7 @@ public class MainMenu extends Application {
         window.setTitle("Main Menu - Bus System");
     	window.getIcons().add(new Image("icon.png"));
         FlowPane layout = new FlowPane();
+        window.setResizable(false);
         
         Button mainToLogin = new Button("Login Button");
         //Button switches scene for the user to login

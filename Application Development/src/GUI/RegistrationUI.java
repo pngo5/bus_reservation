@@ -52,6 +52,7 @@ public class RegistrationUI extends Application {
 		window = primaryStage;
 		window.getIcons().add(new Image("icon.png"));
 		window.setTitle("Bus Resvoir - Registration");
+		window.setResizable(false);
 		
 		//Creating gridPane
 				GridPane gridPane = new GridPane();
