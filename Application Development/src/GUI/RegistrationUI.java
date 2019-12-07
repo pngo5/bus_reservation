@@ -22,6 +22,9 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
+import java.net.URL;
+import javafx.scene.layout.AnchorPane;
+import java.util.ResourceBundle;
 
 public class RegistrationUI extends Application {
 	
@@ -132,8 +135,7 @@ public class RegistrationUI extends Application {
         
         // Add state Label
         Label stateLabel = new Label("State Name : ");
-        gridPane.add(stateLabel, 0,5);
-        
+        gridPane.add(stateLabel, 0,5);     
         //Add state drop down menu
         stateBox = new TextField();
         zipText.setPromptText("Select ");
