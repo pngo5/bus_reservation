@@ -30,8 +30,7 @@ public class User {
 	private String secAnswers;
 	private short isAdmin;
 	
-	
-
+	//
 
 
 	public User(String userName, String password, String firstName, String lastName, String address, String zip,
