@@ -14,7 +14,6 @@ import javafx.scene.control.ListView;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.SelectionMode;
 import javafx.scene.control.TextField;
-import javafx.scene.image.Image;
 import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Priority;
@@ -50,7 +49,7 @@ public class RegistrationUI extends Application {
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		window = primaryStage;
-		window.getIcons().add(new Image("icon.png"));
+		
 		window.setTitle("Bus Resvoir - Registration");
 		
 		//Creating gridPane
@@ -213,10 +212,14 @@ public class RegistrationUI extends Application {
         		AlertBox.display("Finish the registration", "You are missing some inputs.");
         		
         	}else {
+        		/**
+        		 * This will create a user object and gather all the inputed user Data to the database;
+        		 */
         		user = new User(usernameText.getText(), passwordText.getText(), firstNameText.getText(), lastNameText.getText(), 
         				addressText.getText(), zipText.getText(), stateBox.getText(), emailText.getText(), ssnTextField.getText(),
         				securityQChoiceBox.getSelectionModel().getSelectedItem(), securityATextField.getText());
         		
+        		// Created this object to register user and then registered them
         		RegisterNewUser r = new RegisterNewUser();
         		
         		try {
@@ -226,6 +229,8 @@ public class RegistrationUI extends Application {
 					e2.printStackTrace();
 				}
         		
+        		
+        		// This code take user to login.
         		Login lgn = new Login();
         		try {
         			lgn.start(primaryStage);
