@@ -16,11 +16,11 @@ public class Splash extends Application {
 	public void start(Stage primaryStage) throws Exception {
 		// TODO Auto-generated method stub
 		 JWindow window = new JWindow();
-	      window.getContentPane().add(new JLabel("",new ImageIcon("/Users/Phat/Desktop/lol.gif"),SwingConstants.CENTER));
+	      window.getContentPane().add(new JLabel("",new ImageIcon("/Users/Phat/Desktop/tr.gif"),SwingConstants.CENTER));
 	      window.setBounds(300,300,500,500); 
 	      window.setVisible(true);
 	      try {
-	    	 Thread.sleep(3000);    	  
+	    	 Thread.sleep(4250);    	  
 	         }
 	   catch(InterruptedException e) {}	
 		window.dispose();
