@@ -1,18 +1,13 @@
 package BusinessLogic;
 
-import Objects.Registration;
+import Objects.User;
+import Database.Mysql;
 
 public class RegisterNewUser implements RegisteringNewUser {
-
+	
 	@Override
-	public void addUserToDataBase(Registration user) {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void createUserToDataBase(Registration user) {
-		// TODO Auto-generated method stub
+	public void addUserToDataBase(User user) throws Exception {
+		Mysql.post(user);
 		
 	}
 

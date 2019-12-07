@@ -1,4 +1,5 @@
 package Database;
+import Objects.User;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -39,19 +40,19 @@ public class Mysql {
 	
 	
 	
-	public static void post() throws Exception {
-		final String user = "adarman1";
-		final String password = "cis3270";
-		final String var1 = "Abdulhakim";
-		final String var2 = "Darman";
-		final String addy = "1101 Main Street";
-		final int zip = 10111;
-		final String state = "GA";
-		final String email = "123Fakeemail@gmial.com";
-		final String ssn = "343434";
-		final String question = "Are you addicted to chickfila";
-		final String answer = "Yes";
-		final int admin = 1;
+	public static void post(User u) throws Exception {
+		final String user = u.getUserName();
+		final String password = u.getPassword();
+		final String var1 = u.getFirstName();
+		final String var2 = u.getLastName();
+		final String addy = u.getAddress();
+		final String zip = u.getZip();
+		final String state = u.getState();
+		final String email = u.getEmail();
+		final String ssn = u.getSsn();
+		final String question = u.getSecQuestions();
+		final String answer = u.getSecAnswers();
+		final int admin = 0;
 		
 		
 		try {
@@ -60,7 +61,8 @@ public class Mysql {
 		posted.executeUpdate();
 		}catch(Exception e) {System.out.println(e);}
 		finally {
-			System.out.println("Insert Completed");
+			System.out.println("Insert Completed12");
+			System.out.println(u.getUserName());
 		}
 	}
 	

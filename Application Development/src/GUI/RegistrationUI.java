@@ -1,5 +1,7 @@
 package GUI;
 
+import BusinessLogic.RegisterNewUser;
+import Objects.User;
 import javafx.application.Application;
 import javafx.geometry.HPos;
 import javafx.geometry.Insets;
@@ -24,7 +26,10 @@ public class RegistrationUI extends Application {
 	
 	Button registerButton;
 	Stage window;
-	TextField firstNameText, lastNameText, addressText, zipText, emailText;
+	TextField firstNameText, lastNameText, addressText, zipText, emailText, usernameText, stateBox, securityATextField;
+	PasswordField passwordText, ssnTextField;
+	ChoiceBox<String> securityQChoiceBox;
+	User user;
 	
 	public static void main(String[] args) {
 		launch(args);
@@ -128,7 +133,7 @@ public class RegistrationUI extends Application {
         gridPane.add(stateLabel, 0,5);
         
         //Add state drop down menu
-        TextField stateBox = new TextField();
+        stateBox = new TextField();
         zipText.setPromptText("Select ");
         gridPane.add(stateBox, 1, 5);
         
@@ -138,7 +143,7 @@ public class RegistrationUI extends Application {
         gridPane.add(emailLabel, 0,6);
         
         //Add email Text Field
-        TextField emailText = new TextField();
+        emailText = new TextField();
         emailText.setPrefHeight(20);
         emailText.setPromptText("Email");
         gridPane.add(emailText, 1,6); 
@@ -148,7 +153,7 @@ public class RegistrationUI extends Application {
         gridPane.add(usernameLabel, 0,7);
         
         //Add email Username text
-        TextField usernameText = new TextField();
+        usernameText = new TextField();
         usernameText.setPrefHeight(20);
         usernameText.setPromptText("Username");
         gridPane.add(usernameText, 1,7); 
@@ -159,7 +164,7 @@ public class RegistrationUI extends Application {
         gridPane.add(passwordLabel, 0,8);
         
         //Add password text
-        PasswordField passwordText = new PasswordField();
+        passwordText = new PasswordField();
         passwordText.setPrefHeight(20);
         passwordText.setPromptText("Password");
         gridPane.add(passwordText, 1,8); 
@@ -169,7 +174,7 @@ public class RegistrationUI extends Application {
         gridPane.add(ssnLabel, 0, 9);
         
         //Add SSN text field
-        PasswordField ssnTextField = new PasswordField();
+        ssnTextField = new PasswordField();
         ssnTextField.setPromptText("Social Security Number");
         gridPane.add(ssnTextField, 1, 9);
         
@@ -178,7 +183,7 @@ public class RegistrationUI extends Application {
         gridPane.add(securityQLabel, 0, 10);
         
         //Add Security Question ChoiceBox
-        ChoiceBox<String> securityQChoiceBox = new ChoiceBox();
+        securityQChoiceBox = new ChoiceBox();
         securityQChoiceBox.getItems().addAll("What is the name of your first teacher",
         		"What is the name of your first pet",
         		"What is the name of your School"); 
@@ -191,7 +196,7 @@ public class RegistrationUI extends Application {
         gridPane.add(securityALabel, 0, 11);
         
         //Add Security Answer Field
-        PasswordField securityATextField = new PasswordField();
+        securityATextField = new TextField();
         securityATextField.setPromptText("Security Answer");
         gridPane.add(securityATextField, 1, 11);
         
@@ -205,7 +210,21 @@ public class RegistrationUI extends Application {
         			passwordText.getText().isEmpty() ||  ssnTextField.getText().isEmpty() ||
         			securityATextField.getText().isEmpty()) {
         		AlertBox.display("Finish the registration", "You are missing some inputs.");
+        		
         	}else {
+        		user = new User(usernameText.getText(), passwordText.getText(), firstNameText.getText(), lastNameText.getText(), 
+        				addressText.getText(), zipText.getText(), stateBox.getText(), emailText.getText(), ssnTextField.getText(),
+        				securityQChoiceBox.getSelectionModel().getSelectedItem(), securityATextField.getText());
+        		
+        		RegisterNewUser r = new RegisterNewUser();
+        		
+        		try {
+					r.addUserToDataBase(user);
+				} catch (Exception e2) {
+					// TODO Auto-generated catch block
+					e2.printStackTrace();
+				}
+        		
         		Login lgn = new Login();
         		try {
         			lgn.start(primaryStage);
