@@ -7,6 +7,14 @@
 	-fx-background-size:1024 600;
 	
 }
+
+.button{
+	-fx-background-color: #7395AE;
+	-fx-text-fill:#FFFFFF;
+	-fx-background-radius:50;
+}
+
+
 .border{
 	
 }

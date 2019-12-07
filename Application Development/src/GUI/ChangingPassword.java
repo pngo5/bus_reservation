@@ -35,7 +35,7 @@ package GUI;
 	public void start(Stage primaryStage) throws Exception {
 		    window = primaryStage;
 		    window.setTitle("Changing Password");
-		    
+		    window.setResizable(false);
 		    
 		    
 		    GridPane grid = new GridPane();
