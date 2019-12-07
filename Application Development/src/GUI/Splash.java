@@ -1,5 +1,8 @@
 package GUI;
 
+import java.awt.Dimension;
+import java.awt.Toolkit;
+
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JWindow;
@@ -16,11 +19,20 @@ public class Splash extends Application {
 	public void start(Stage primaryStage) throws Exception {
 		// TODO Auto-generated method stub
 		 JWindow window = new JWindow();
+
 	      window.getContentPane().add(new JLabel("",new ImageIcon("/Users/abdulhakimdarman/git/DataLegend/Application Development/src/lol.gif"),SwingConstants.CENTER));
 	      window.setBounds(300,300,500,500); 
+
+		 Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+		    int centerX = screenSize.width/2;
+		    int centerY = screenSize.height/2;
+	      window.getContentPane().add(new JLabel("",new ImageIcon("/Users/Phat/Desktop/tr.gif"),SwingConstants.CENTER));
+	      window.setBounds(centerX, centerY, 500, 500);
+	      window.setLocationRelativeTo(null);;
+
 	      window.setVisible(true);
 	      try {
-	    	 Thread.sleep(3000);    	  
+	    	 Thread.sleep(4250);    	  
 	         }
 	   catch(InterruptedException e) {}	
 		window.dispose();

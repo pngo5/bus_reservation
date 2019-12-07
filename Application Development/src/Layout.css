@@ -7,6 +7,32 @@
 	-fx-background-size:1024 600;
 	
 }
+
+.button{
+	-fx-background-color: 
+	linear-gradient(#f0ff35,#a9ff00),
+	radial-gradient(center 50% -40%, radius 200%,#b8ee36 45%,#80c800 50%);
+	 -fx-border-radius: 20;
+	 -fx-font-size: 15px;
+	-fx-background-radius:6,5;
+	-fx-background-insets:0,1;
+	-fx-effect: dropshadow(three-pass-box, rgb(0,0,0,0.4),5,0.0,0,1);
+	
+
+	
+}
+.button:hover{
+    -fx-background-color: linear-gradient(#2A5058, #61a2b1);
+}
+
+.label{
+	-fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+    -fx-effect: dropshadow( gaussian , rgba(255,255,255,0.5) , 0,0,0,1 );
+	
+}
+
 .border{
 	
 }

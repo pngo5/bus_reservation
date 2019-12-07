@@ -52,7 +52,8 @@ public class Login extends Application {
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		window = primaryStage;
-
+		window.setResizable(false);
+          
 		GridPane userGrid = new GridPane();
 		userGrid.setPadding(new Insets(10, 10, 10, 10));
 		userGrid.setVgap(8);
@@ -85,7 +86,16 @@ public class Login extends Application {
 		//Login Button
 		Button loginButton = new Button("Log In");
 		GridPane.setConstraints(loginButton, 1, 3);
-		
+		loginButton .setOnAction(e -> {
+			MainApplication ma = new MainApplication();
+			try {
+				ma.start(primaryStage);
+			} catch (Exception e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+		});
+	
 		Button forgotPasswordButton = new Button("Forgot Password");
 		GridPane.setConstraints(forgotPasswordButton, 1, 6);
 		forgotPasswordButton.setOnAction(e -> {
@@ -118,8 +128,7 @@ public class Login extends Application {
 		userGrid.getChildren().addAll(nameLabel, nameInput, passLabel, passInput,forgotPasswordButton,
 				loginButton, backButton);
 		Scene userScene = new Scene(userGrid, 500, 500);
-		
-
+		userScene.getStylesheets().add("Layout.css");
 		userGrid.setAlignment(Pos.CENTER);
 		window.setScene(userScene);
 		window.setTitle("User Login");

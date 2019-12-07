@@ -98,6 +98,7 @@ public void start(Stage primaryStage) throws Exception {
         
   
         Scene scene = new Scene(grid, 500,500);
+    	scene.getStylesheets().add("Layout.css");
         window.setScene(scene);
 	    
 	    window.show();

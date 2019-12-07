@@ -239,7 +239,7 @@ public class RegistrationUI extends Application {
         
         // Create a scene with registration form 
  		Scene scene = new Scene(gridPane, 700, 600);
-        
+ 		scene.getStylesheets().add("Layout.css");
         // Set the scene in primary stage	
         window.setScene(scene);
         
