@@ -2,90 +2,67 @@ package Objects;
 
 public class Ticket {
 	
-	private long BusNumber;
-	private String startTime;
-	private String endTime;
+	private long busID;
+	private String departTime;
+	private String arrivalTime;
 	private String startLocation;
 	private String endLocation;
+	private static int passengerCount;
 	private double ticketPrice;
 	
-	public long getBusNumber() {
-		return BusNumber;
+	public Ticket(long busID, String departTime, String arrivalTime, String startLocation, String endLocation,
+			double ticketPrice) {
+		super();
+		this.busID = busID;
+		this.departTime = departTime;
+		this.arrivalTime = arrivalTime;
+		this.startLocation = startLocation;
+		this.endLocation = endLocation;
+		this.ticketPrice = ticketPrice;
 	}
-
-
-	public void setBusNumber(long busNumber) {
-		BusNumber = busNumber;
+	
+	public long getBusID() {
+		return busID;
 	}
-
-
-	public String getStartTime() {
-		return startTime;
+	public void setBusID(long busID) {
+		this.busID = busID;
 	}
-
-
-	public void setStartTime(String startTime) {
-		this.startTime = startTime;
+	public String getDepartTime() {
+		return departTime;
 	}
-
-
-	public String getEndTime() {
-		return endTime;
+	public void setDepartTime(String departTime) {
+		this.departTime = departTime;
 	}
-
-
-	public void setEndTime(String endTime) {
-		this.endTime = endTime;
+	public String getArrivalTime() {
+		return arrivalTime;
 	}
-
-
+	public void setArrivalTime(String arrivalTime) {
+		this.arrivalTime = arrivalTime;
+	}
 	public String getStartLocation() {
 		return startLocation;
 	}
-
-
 	public void setStartLocation(String startLocation) {
 		this.startLocation = startLocation;
 	}
-
-
 	public String getEndLocation() {
 		return endLocation;
 	}
-
-
 	public void setEndLocation(String endLocation) {
 		this.endLocation = endLocation;
 	}
-
-
+	public static int getPassengerCount() {
+		return passengerCount;
+	}
+	public static void setPassengerCount(int passengerCount) {
+		Ticket.passengerCount = passengerCount;
+	}
 	public double getTicketPrice() {
 		return ticketPrice;
 	}
-
-
 	public void setTicketPrice(double ticketPrice) {
 		this.ticketPrice = ticketPrice;
 	}
-	
-	public Ticket() {
-		BusNumber = 0;
-		startTime = " 1 AM";
-		startLocation = "Atl";
-		endLocation = "Washington D.C";
-		ticketPrice = 0;
-	}
-	
-	
-	public Ticket(long BusNumber, String startTime,String endTime, 
-			String startLocation, String endLocation, double ticketPrice) {
-		this.BusNumber = BusNumber;
-		this.startTime = startTime;
-		this.endTime = endTime;
-		this.startLocation = startLocation;
-		this.endLocation = endLocation;
-		this.ticketPrice = ticketPrice;
-	}
-	
+
 
 }
