@@ -13,25 +13,25 @@ import javafx.stage.Stage;
 
 
 public class Test extends Application {
-@Override
-public void start(Stage stage) {
-	try {
-		ImageView iv= new ImageView();
-		iv.setImage(image);
-		stage.setScene(scene);
-		stage.show();
-	} catch(Exception e){
-		e.printStackTrace();
+	@Override
+	public void start(Stage stage) {
+		try {
+			ImageView iv= new ImageView();
+			iv.setImage(image);
+			stage.setScene(scene);
+			stage.show();
+		} catch(Exception e){
+			e.printStackTrace();
+		}
 	}
-}
 
-Image image = new Image("");
-StackPane pane = new StackPane();
-Scene scene = new Scene(pane,500,500);
+	Image image = new Image("");
+	StackPane pane = new StackPane();
+	Scene scene = new Scene(pane,500,500);
 
- public static void main(String[] args) {
-	 launch(args);
- }
+	public static void main(String[] args) {
+		launch(args);
+	}
 
 
 }

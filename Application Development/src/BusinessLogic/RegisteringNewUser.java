@@ -1,11 +1,9 @@
 package BusinessLogic;
 
-import Objects.Registration;
+import Objects.User;
 
 public interface RegisteringNewUser {
 	
-	public abstract void createUserToDataBase(Registration user);
-	
-	public abstract void addUserToDataBase(Registration user);
+	public abstract void addUserToDataBase(User user) throws Exception;
 
 }

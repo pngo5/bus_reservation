@@ -46,7 +46,7 @@ public class MainApplication extends Application {
 		window = primaryStage;
 		window.setTitle("Main Application (User)");
 
-//Create GridPane
+		//Create GridPane
 		GridPane grid = createGrid();
 
 		Scene scene = new Scene(grid, 1000, 650);
@@ -60,15 +60,15 @@ public class MainApplication extends Application {
 
 	public GridPane createGrid() {
 
-// Creating GridPane to easily put objects into their locations
+		// Creating GridPane to easily put objects into their locations
 		GridPane fromToGrid = new GridPane();
 		fromToGrid.setAlignment(Pos.TOP_LEFT);
 
-//Top left GridPane this is where the logout button and the main button will be.
+		//Top left GridPane this is where the logout button and the main button will be.
 		GridPane topRightGrid = new GridPane();
 		topRightGrid.setAlignment(Pos.TOP_RIGHT);
 
-//The main gridpane where everything is added together
+		//The main gridpane where everything is added together
 		GridPane userMainApplicationGrid = new GridPane();
 		userMainApplicationGrid.setAlignment(Pos.CENTER);
 
@@ -76,27 +76,27 @@ public class MainApplication extends Application {
 		 * Initializing Buttons and setting location
 		 */
 
-//Creating From City Label
+		//Creating From City Label
 		fromCityLabel = new Label("From");
 		fromToGrid.add(fromCityLabel, 0, 0);
 
-//Creating From City Text Field
+		//Creating From City Text Field
 		fromCityText = new TextField();
 		fromCityText.setPrefHeight(30);
 		fromCityText.setPrefWidth(100);
 		fromToGrid.add(fromCityText, 0, 1);
 
-//Creating To City Label
+		//Creating To City Label
 		toCityLabel = new Label("To");
 		fromToGrid.add(toCityLabel, 1, 0);
 
-//Creating To City Text
+		//Creating To City Text
 		toCityText = new TextField();
 		toCityText.setPrefHeight(30);
 		toCityText.setPrefWidth(100);
 		fromToGrid.add(toCityText, 1, 1);
 
-//Adding back to Main Menu button
+		//Adding back to Main Menu button
 		backToMainMenu = new Button("Main Menu");
 		topRightGrid.add(backToMainMenu, 0, 0);
 		backToMainMenu.setOnAction(e -> {
@@ -104,12 +104,12 @@ public class MainApplication extends Application {
 			try {
 				mm.start(window);
 			} catch (Exception e1) {
-// TODO Auto-generated catch block
+				// TODO Auto-generated catch block
 				e1.printStackTrace();
 			}
 		});
 
-//Log Out Button
+		//Log Out Button
 		logOut = new Button("Log Out");
 		topRightGrid.add(logOut, 0, 1);
 		logOut.setOnAction(e -> {
@@ -117,12 +117,12 @@ public class MainApplication extends Application {
 			try {
 				mm.start(window);
 			} catch (Exception e1) {
-// TODO Auto-generated catch block
+				// TODO Auto-generated catch block
 				e1.printStackTrace();
 			}
 		});
 
-//Creating a reserve a ticket label
+		//Creating a reserve a ticket label
 		Label reserveTicketLabel = new Label("Book a ticket here!");
 		reserveTicketLabel.setFont(Font.font("Arial", FontWeight.BOLD, 24));
 		userMainApplicationGrid.add(reserveTicketLabel, 0, 33, 2, 1);
@@ -158,16 +158,16 @@ public class MainApplication extends Application {
 	 * @return
 	 */
 
-	public ObservableList<BusSystem> getBusSystem() {
+
+	public ObservableList<BusSystem> getBusSystem(){
 
 		ObservableList<BusSystem> BusSystem1 = FXCollections.observableArrayList();
-		BusSystem1.add(new BusSystem(2314214, "1 AM", "1 PM", "Atl", "Dallas", 40.40));
-		BusSystem1.add(new BusSystem(2314214, "1 Am", "2 AM", "Dallas", "Atl", 40.40));
+		BusSystem1.add(new BusSystem(2314214, "1 AM", "1 PM","Atl", "Dallas", 40.40));
+		BusSystem1.add(new BusSystem(2314214,"1 Am","2 AM", "Dallas", "Atl",  40.40));
 
 		return BusSystem1;
 
 	}
-
 	/**
 	 * Buttons and their functions
 	 */
@@ -176,7 +176,6 @@ public class MainApplication extends Application {
 		ObservableList<BusSystem> productSelected, allProducts;
 		allProducts = this.table.getItems();
 		productSelected = this.table.getSelectionModel().getSelectedItems();
-
 	}
 
 	public void deleteButtonClicked() {
@@ -186,7 +185,6 @@ public class MainApplication extends Application {
 
 		productSelected.forEach(allProducts::remove);
 	}
-
 	/**
 	 * Creates the view tables
 	 * 
@@ -221,14 +219,14 @@ public class MainApplication extends Application {
 		ticketPrice.setMinWidth(60);
 		ticketPrice.setCellValueFactory(new PropertyValueFactory<>("ticketPrice"));
 
-//Creating table
+		//Creating table
 		table = new TableView<>();
 
-//Populating table system
+		//Populating table system
 		table.setItems(getBusSystem());
 		table.getColumns().addAll(busNumber, startTime, endTime, startLocation, endLocation, ticketPrice);
 
-//Adding the table to a VbOX
+		//Adding the table to a VbOX
 		VBox vBox = new VBox();
 		vBox.getChildren().addAll(table);
 
