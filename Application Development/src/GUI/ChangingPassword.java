@@ -12,6 +12,7 @@ import javafx.scene.control.ListView;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.SelectionMode;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Priority;
@@ -36,6 +37,7 @@ public class ChangingPassword extends Application {
 		window = primaryStage;
 		window.setTitle("Changing Password");
 		window.setResizable(false);
+		window.getIcons().add(new Image("icon.png"));
 
 
 		GridPane grid = new GridPane();

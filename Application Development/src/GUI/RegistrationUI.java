@@ -14,6 +14,7 @@ import javafx.scene.control.ListView;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.SelectionMode;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Priority;
@@ -49,7 +50,7 @@ public class RegistrationUI extends Application {
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		window = primaryStage;
-		
+		window.getIcons().add(new Image("icon.png"));
 		window.setTitle("Bus Resvoir - Registration");
 		
 		//Creating gridPane

@@ -12,6 +12,7 @@ import javafx.scene.control.ListView;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.SelectionMode;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Priority;
@@ -35,7 +36,7 @@ public class ForgetPassword extends Application {
 public void start(Stage primaryStage) throws Exception {
 	    window = primaryStage;
 	    window.setTitle("Forgot Password Validation Form");
-	    
+	    window.getIcons().add(new Image("icon.png"));
 	    
 	    
 	    GridPane grid = new GridPane();

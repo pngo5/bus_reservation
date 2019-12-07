@@ -15,6 +15,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.Image;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
@@ -45,6 +46,7 @@ public class MainApplication extends Application {
 	public void start(Stage primaryStage) throws Exception {
 		window = primaryStage;
 		window.setTitle("Main Application (User)");
+		window.getIcons().add(new Image("icon.png"));
 
 		//Create GridPane
 		GridPane grid = createGrid();
