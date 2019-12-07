@@ -48,7 +48,7 @@ public class MainMenu extends Application {
     	window.getIcons().add(new Image("icon.png"));
         FlowPane layout = new FlowPane();
         window.setResizable(false);
-        
+
         Button mainToLogin = new Button("Login Button");
         //Button switches scene for the user to login
         mainToLogin.setOnAction(e -> {
@@ -72,7 +72,8 @@ public class MainMenu extends Application {
 				e1.printStackTrace();
 			}
         });
-
+    Image image= new Image("lol.gif");
+    
         
         layout.setHgap(25);
         layout.getChildren().addAll(mainToLogin, mainToRegistration);
