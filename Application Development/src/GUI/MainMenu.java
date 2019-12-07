@@ -72,7 +72,6 @@ public class MainMenu extends Application {
 				e1.printStackTrace();
 			}
         });
-    Image image= new Image("lol.gif");
     
         
         layout.setHgap(25);
