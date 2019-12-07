@@ -15,6 +15,9 @@ public class Splash extends Application {
 	public  static void main(String[] args) throws Exception {
     launch(args);	
 }
+	/****
+	 * Error
+	 */
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		// TODO Auto-generated method stub
