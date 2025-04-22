@@ -41,15 +41,21 @@ cd bus_reservation
 Install Dependencies:
 
 For a Java-based system:
+
 Ensure Java JDK 11+ and Maven are installed.
-Run:mvn install
+
+Run:
+mvn install
 
 
 
 
 For a Python-based system:
+
 Ensure Python 3.8+ and pip are installed.
-Install dependencies:pip install -r requirements.txt
+
+Install dependencies:
+pip install -r requirements.txt
 
 
 
@@ -59,7 +65,9 @@ Install dependencies:pip install -r requirements.txt
 Configure the Database:
 
 Set up a MySQL or SQLite database.
-Update the configuration file (e.g., application.properties for Java or settings.py for Python) with your database credentials:# Example for MySQL
+
+Update the configuration file (e.g., application.properties for Java or settings.py for Python) with your database credentials:
+# Example for MySQL
 spring.datasource.url=jdbc:mysql://localhost:3306/bus_reservation_db
 spring.datasource.username=root
 spring.datasource.password=your_password
@@ -69,13 +77,16 @@ spring.datasource.password=your_password
 
 Run the Application:
 
-For Java:mvn spring-boot:run
+For Java:
+mvn spring-boot:run
 
 
-For Python:python manage.py runserver
+For Python:
+python manage.py runserver
 
 
 Access the application at http://localhost:8080 (or the specified port).
+
 
 
 
